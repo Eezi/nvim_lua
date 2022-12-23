@@ -34,7 +34,6 @@ function ColorMyPencils(color)
     fg = "#5eacd3"
   })
 
-
 end
 
 ColorMyPencils()

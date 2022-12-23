@@ -25,6 +25,9 @@ use({'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'})
 use('theprimeagen/harpoon')
 use('mbbill/undotree')
 use('tpope/vim-fugitive')
+use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
+use('jose-elias-alvarez/null-ls.nvim')
+use 'windwp/nvim-autopairs'
 
  use {
 	  'VonHeikemen/lsp-zero.nvim',
