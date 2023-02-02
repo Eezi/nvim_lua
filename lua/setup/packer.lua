@@ -13,10 +13,11 @@ return require('packer').startup(function(use)
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  use({ "ellisonleao/gruvbox.nvim",
-    as = 'gruvbox',
+  --"ellisonleao/gruvbox.nvim"
+  use({ "folke/tokyonight.nvim",
+    as = 'tokyonight',
     config = function()
-      vim.cmd('colorscheme gruvbox')
+      vim.cmd('colorscheme tokyonight')
     end
   })
 
@@ -28,6 +29,7 @@ return require('packer').startup(function(use)
   use('mhartington/formatter.nvim')
   use('jose-elias-alvarez/null-ls.nvim')
   use 'windwp/nvim-autopairs'
+  use 'sbdchd/neoformat'
 
   use {
     'VonHeikemen/lsp-zero.nvim',

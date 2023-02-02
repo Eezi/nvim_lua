@@ -4,4 +4,5 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 --vim.keymap.set("n", "gi", vim.cmg.g)
 vim.keymap.set("n", "<Space>w", vim.cmd.w)
+--vim.keymap.set("n", "<Space>e", ":Prettier")
 vim.opt.clipboard:append { 'unnamedplus' }
