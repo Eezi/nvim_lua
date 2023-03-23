@@ -1,4 +1,4 @@
-require('formatter').setup({
+--[[require('formatter').setup({
   logging = false,
   filetype = {
     javascript = {
@@ -13,4 +13,4 @@ require('formatter').setup({
     },
     -- other formatters ...
   }
-})
+})]]--

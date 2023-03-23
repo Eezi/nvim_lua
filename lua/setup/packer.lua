@@ -12,9 +12,10 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+  -- Telescope picker for edited files
+  use { "axkirillov/telescope-changed-files" }
 
   --"folke/tokyonight.nvim"
-  --"ellisonleao/gruvbox.nvim"
   use({ "ellisonleao/gruvbox.nvim",
     as = 'gruvbox',
     config = function()
@@ -27,10 +28,10 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
-  use('mhartington/formatter.nvim')
+  --use('mhartington/formatter.nvim')
   use('jose-elias-alvarez/null-ls.nvim')
   use 'windwp/nvim-autopairs'
-  use 'sbdchd/neoformat'
+  --use 'sbdchd/neoformat'
 
   use {
     'VonHeikemen/lsp-zero.nvim',
