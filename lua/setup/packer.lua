@@ -16,10 +16,11 @@ return require('packer').startup(function(use)
   use { "axkirillov/telescope-changed-files" }
 
   --"folke/tokyonight.nvim"
-  use({ "ellisonleao/gruvbox.nvim",
-    as = 'gruvbox',
+  -- ellisonleao/gruvbox.nvim
+  use({ "rose-pine/neovim",
+    as = 'rose-pine',
     config = function()
-      vim.cmd('colorscheme gruvbox')
+      vim.cmd('colorscheme rose-pine')
     end
   })
 
