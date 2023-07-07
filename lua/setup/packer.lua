@@ -12,8 +12,6 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-  -- Telescope picker for edited files
-  use { "axkirillov/telescope-changed-files" }
 
   --"folke/tokyonight.nvim"
   -- ellisonleao/gruvbox.nvim
@@ -62,14 +60,5 @@ return require('packer').startup(function(use)
       require('gitsigns').setup()
     end
   }
-
-  -- file tree
---[[  use {
-  'nvim-tree/nvim-tree.lua',
-  requires = {
-    'nvim-tree/nvim-web-devicons', -- optional, for file icons
-  },
-  tag = 'nightly' -- optional, updated every week. (see issue #1193)
-}]]--
 
 end)

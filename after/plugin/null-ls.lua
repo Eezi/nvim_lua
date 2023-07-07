@@ -1,4 +1,4 @@
-local null_ls = require("null-ls")
+--[[local null_ls = require("null-ls")
 
 local group = vim.api.nvim_create_augroup("lsp_format_on_save", { clear = false })
 local event = "BufWritePre" -- or "BufWritePost"
@@ -26,7 +26,7 @@ null_ls.setup({
         end,
         desc = "[lsp] format on save",
       })]]--
-    end
+    --[[end
 
     if client.supports_method("textDocument/rangeFormatting") then
       --vim.keymap.set("x", "<Leader>f", function()
@@ -34,4 +34,31 @@ null_ls.setup({
       --end, { buffer = bufnr, desc = "[lsp] format" })
     end
   end,
-})
+})]]--
+
+local present, null_ls = pcall(require, "null-ls")
+
+if not present then
+  return
+end
+
+local b = null_ls.builtins
+
+local sources = {
+
+  -- webdev stuff
+  b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
+  b.formatting.prettier, --.with { filetypes = { "html", "markdown", "css", "js", "tsx", "ts" } }, -- so prettier works only on these filetypes
+
+  -- Lua
+  b.formatting.stylua,
+
+  -- cpp
+  b.formatting.clang_format,
+}
+
+null_ls.setup {
+  debug = true,
+  sources = sources,
+}
+

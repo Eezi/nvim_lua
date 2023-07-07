@@ -181,11 +181,6 @@ _G.packer_plugins = {
     path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["telescope-changed-files"] = {
-    loaded = true,
-    path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/telescope-changed-files",
-    url = "https://github.com/axkirillov/telescope-changed-files"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/telescope.nvim",
