@@ -2,7 +2,6 @@ local builtin = require("telescope.builtin")
 local status, telescope = pcall(require, "telescope")
 if (not status) then return end
 local actions = require('telescope.actions')
-require('telescope').load_extension('changed_files')
 vim.keymap.set("n", "<Space>d", builtin.find_files, {})
 vim.keymap.set("n", "<Space>f", builtin.git_files, {})
 vim.keymap.set("n", "<Space>g", builtin.live_grep, {})
