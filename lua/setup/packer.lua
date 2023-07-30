@@ -29,8 +29,19 @@ return require('packer').startup(function(use)
   use 'MunifTanjim/prettier.nvim' -- Prettier plugin for Neovim's built-in LSP client
   --use('mhartington/formatter.nvim')
   use('jose-elias-alvarez/null-ls.nvim')
-  use 'windwp/nvim-autopairs'
-  --use 'sbdchd/neoformat'
+  use('windwp/nvim-autopairs')
+  use('windwp/nvim-ts-autotag')
+  use {
+    "nvim-telescope/telescope-file-browser.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+  }
+  use ({
+    'nvimdev/lspsaga.nvim',
+    after = 'nvim-lspconfig',
+    config = function()
+        require('lspsaga').setup({})
+    end,
+  })
 
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -47,10 +58,15 @@ return require('packer').startup(function(use)
       { 'saadparwaiz1/cmp_luasnip' },
       { 'hrsh7th/cmp-nvim-lsp' },
       { 'hrsh7th/cmp-nvim-lua' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'onsails/lspkind-nvim'},
 
       -- Snippets
       { 'L3MON4D3/LuaSnip' },
       { 'rafamadriz/friendly-snippets' },
+
+      --use 'onsails/lspkind-nvim' -- vscode-like pictograms
+  
     }
   }
 

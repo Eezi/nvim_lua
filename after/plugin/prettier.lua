@@ -1,4 +1,4 @@
-local prettier = require("prettier")
+--[[local prettier = require("prettier")
 
 prettier.setup({
   bin = 'prettier', -- or `'prettierd'` (v0.22+)
@@ -36,4 +36,20 @@ prettier.setup({
     use_tabs = false,
     vue_indent_script_and_style = false,
   },
-})
+})]]--
+local status, prettier = pcall(require, "prettier")
+if (not status) then return end
+
+prettier.setup {
+  bin = 'prettier',
+  filetypes = {
+    "css",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "json",
+    "scss",
+    "less"
+  }
+}

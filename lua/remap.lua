@@ -5,3 +5,11 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<Space>w", vim.cmd.w)
 vim.opt.clipboard:append { 'unnamedplus' }
+vim.api.nvim_set_keymap(
+  "n",
+  "<space>fb",
+  ":Telescope file_browser<CR>",
+  { noremap = true }
+)
+vim.keymap.set("n", "<Space>fm", vim.lsp.buf.format)
+

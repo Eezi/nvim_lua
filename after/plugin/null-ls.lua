@@ -36,29 +36,14 @@ null_ls.setup({
   end,
 })]]--
 
-local present, null_ls = pcall(require, "null-ls")
+local status, null_ls = pcall(require, "null-ls")
+if (not status) then return end
 
-if not present then
-  return
-end
-
-local b = null_ls.builtins
-
-local sources = {
-
-  -- webdev stuff
-  b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-  b.formatting.prettier, --.with { filetypes = { "html", "markdown", "css", "js", "tsx", "ts" } }, -- so prettier works only on these filetypes
-
-  -- Lua
-  b.formatting.stylua,
-
-  -- cpp
-  b.formatting.clang_format,
-}
-
-null_ls.setup {
-  debug = true,
-  sources = sources,
-}
-
+null_ls.setup({
+  sources = {
+    null_ls.builtins.diagnostics.eslint_d.with({
+      diagnostics_format = '[eslint] #{m}\n(#{c})'
+    }),
+    --null_ls.builtins.diagnostics.fish
+  }
+})
