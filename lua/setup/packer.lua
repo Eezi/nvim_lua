@@ -14,7 +14,7 @@ return require('packer').startup(function(use)
   }
 
   --"folke/tokyonight.nvim"
-  -- ellisonleao/gruvbox.nvim
+  -- use("ellisonleao/gruvbox.nvim")
   use({ "rose-pine/neovim",
     as = 'rose-pine',
     config = function()
@@ -31,6 +31,9 @@ return require('packer').startup(function(use)
   use('jose-elias-alvarez/null-ls.nvim')
   use('windwp/nvim-autopairs')
   use('windwp/nvim-ts-autotag')
+  use('github/copilot.vim')
+  -- Shows git commits
+  use('APZelos/blamer.nvim')
   use {
     "nvim-telescope/telescope-file-browser.nvim",
     requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
@@ -76,5 +79,6 @@ return require('packer').startup(function(use)
       require('gitsigns').setup()
     end
   }
+  use('NvChad/nvim-colorizer.lua')
 
 end)

@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["blamer.nvim"] = {
+    loaded = true,
+    path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/blamer.nvim",
+    url = "https://github.com/APZelos/blamer.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -103,6 +108,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
+  },
+  ["copilot.vim"] = {
+    loaded = true,
+    path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -162,6 +172,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-colorizer.lua"] = {
+    loaded = true,
+    path = "/Users/tomias/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
+    url = "https://github.com/NvChad/nvim-colorizer.lua"
   },
   ["nvim-lspconfig"] = {
     loaded = true,

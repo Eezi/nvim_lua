@@ -59,6 +59,6 @@ if (not status) then return end
 -- TypeScript
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "astro", "html", "javascript", "javascriptreact", "javascript.jsx", },
   cmd = { "typescript-language-server", "--stdio" }
 }
